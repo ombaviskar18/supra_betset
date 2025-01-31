@@ -128,155 +128,154 @@ export const KEY_FEATURES_CONTENT = {
 export const BET_CONTENT = {
   sectionTitle: "Choose Your Bet",
   sectionDescription:
-    "BetSet offers multiple choices to users for betting, from beginner to pro.",
+    "BetSet offers real-time price prediction betting on major cryptocurrencies.",
     bets: [
       {
         id: 1,
-        title: "What will the Bitcoin Price be by End of 2025?",
-        description: "Predict whether Bitcoin will cross the $150,000 mark by the end of 2024.",
-        shortDescription: "Bet on Bitcoin's price by the end of 2025.",
+        title: "Bitcoin Price Movement",
+        description: "Predict if BTC price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on BTC's short-term price movement",
         image: img1,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 1200000, // Simulated volume in USD
-        liquidity: 500000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2025"
+        volume: 1200000,
+        liquidity: 500000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 2,
-        title: "What will the Ethereum Price be by End of 2025?",
-        description: "Predict whether Ethereum will surpass $10,000 by the end of 2024.",
-        shortDescription: "Bet on Ethereum's price by the end of 2025.",
+        title: "Ethereum Price Movement",
+        description: "Predict if ETH price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on ETH's short-term price movement",
         image: img2,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 800000, // Simulated volume in USD
-        liquidity: 300000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2025"
+        volume: 800000,
+        liquidity: 300000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 3,
-        title: "What will the Solana Price be by Mid-2025?",
-        description: "Predict whether Solana will reach $500 by June 2025.",
-        shortDescription: "Bet on Solana's price by mid-2025.",
+        title: "Solana Price Movement",
+        description: "Predict if SOL price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on SOL's short-term price movement",
         image: img3,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 400000, // Simulated volume in USD
-        liquidity: 150000, // Simulated liquidity in USD
-        expiryDate: "June 30, 2025"
+        volume: 400000,
+        liquidity: 150000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 4,
-        title: "Will XRP surpass $5 by End of 2025?",
-        description: "Predict whether XRP will cross the $5 mark by the end of 2025.",
-        shortDescription: "Bet on XRP's price by 2025.",
+        title: "XRP Price Movement",
+        description: "Predict if XRP price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on XRP's short-term price movement",
         image: img4,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 300000, // Simulated volume in USD
-        liquidity: 100000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2025"
+        volume: 300000,
+        liquidity: 100000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 5,
-        title: "What will the BNB Price be by End of 2025?",
-        description: "Predict whether BNB will cross the $1,000 mark by the end of 2025.",
-        shortDescription: "Bet on BNB's price by 2025.",
+        title: "BNB Price Movement",
+        description: "Predict if BNB price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on BNB's short-term price movement",
         image: img5,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 600000, // Simulated volume in USD
-        liquidity: 250000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2025"
+        volume: 600000,
+        liquidity: 250000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 6,
-        title: "Will Shiba Inu hit $0.01 by 2026?",
-        description: "Predict whether Shiba Inu will reach $0.01 by 2026.",
-        shortDescription: "Bet on Shiba Inu's price by 2026.",
+        title: "SHIB Price Movement",
+        description: "Predict if SHIB price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on SHIB's short-term price movement",
         image: img6,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 200000, // Simulated volume in USD
-        liquidity: 75000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2026"
+        volume: 200000,
+        liquidity: 75000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 7,
-        title: "Will Polkadot exceed $50 by Mid-2025?",
-        description: "Predict whether Polkadot will surpass $50 by June 2025.",
-        shortDescription: "Bet on Polkadot's price by mid-2025.",
+        title: "DOT Price Movement",
+        description: "Predict if DOT price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on DOT's short-term price movement",
         image: img7,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 350000, // Simulated volume in USD
-        liquidity: 120000, // Simulated liquidity in USD
-        expiryDate: "June 30, 2025"
+        volume: 350000,
+        liquidity: 120000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 8,
-        title: "Will Avalanche (AVAX) reach $200 by 2025?",
-        description: "Predict whether Avalanche will hit $200 by the end of 2025.",
-        shortDescription: "Bet on AVAX's price by 2025.",
+        title: "AVAX Price Movement",
+        description: "Predict if AVAX price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on AVAX's short-term price movement",
         image: img8,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 450000, // Simulated volume in USD
-        liquidity: 180000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2025"
+        volume: 450000,
+        liquidity: 180000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 9,
-        title: "Will Terra (LUNA) recover to $50 by 2026?",
-        description: "Predict whether Terra will recover and reach $50 by 2026.",
-        shortDescription: "Bet on LUNA's price recovery.",
+        title: "LUNA Price Movement",
+        description: "Predict if LUNA price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on LUNA's short-term price movement",
         image: img9,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 100000, // Simulated volume in USD
-        liquidity: 40000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2026"
+        volume: 100000,
+        liquidity: 40000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 10,
-        title: "What will the Cardano (ADA) Price be by 2025?",
-        description: "Predict whether Cardano will cross the $5 mark by 2025.",
-        shortDescription: "Bet on ADA's price by 2025.",
+        title: "ADA Price Movement",
+        description: "Predict if ADA price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on ADA's short-term price movement",
         image: img10,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 500000, // Simulated volume in USD
-        liquidity: 200000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2025"
+        volume: 500000,
+        liquidity: 200000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 11,
-        title: "Will Dogecoin reach $1 by End of 2025?",
-        description: "Predict whether Dogecoin will finally hit $1 by 2025.",
-        shortDescription: "Bet on Dogecoin's price milestone.",
+        title: "DOGE Price Movement",
+        description: "Predict if DOGE price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on DOGE's short-term price movement",
         image: img11,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 700000, // Simulated volume in USD
-        liquidity: 300000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2025"
+        volume: 700000,
+        liquidity: 300000,
+        expiryDate: "1-60 minutes"
       },
       {
         id: 12,
-        title: "Will Litecoin (LTC) surpass $500 by 2025?",
-        description: "Predict whether Litecoin will reach $500 by 2025.",
-        shortDescription: "Bet on Litecoin's price performance.",
+        title: "LTC Price Movement",
+        description: "Predict if LTC price will be above your entry price after your chosen timeframe (1-60 mins)",
+        shortDescription: "Bet on LTC's short-term price movement",
         image: img12,
         yesPercentage: 0,
         noPercentage: 100,
-        volume: 250000, // Simulated volume in USD
-        liquidity: 90000, // Simulated liquidity in USD
-        expiryDate: "Dec 31, 2025"
+        volume: 250000,
+        liquidity: 90000,
+        expiryDate: "1-60 minutes"
       }
              
   ]
   
 };
-
 
