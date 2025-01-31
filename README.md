@@ -89,7 +89,7 @@ Ensure you have **Supra MoveVM CLI** installed and configured:
 ---
 ## 📺 Demo & Documentation
 - **Demo:** [Coming Soon]
-- **Project Document:** [Coming Soon]
+- **Project Document:** https://drive.google.com/file/d/1TLXJAwvtiLkWJhpQMQCxpi6wXhFoCiYs/view
 
 
 ---
