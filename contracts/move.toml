@@ -1,0 +1,11 @@
+[package]
+name = "SupraRoulette"
+version = "1.0.0"
+authors = []
+
+[addresses]
+supraRouletteAddress = "0x27f518f899eebd0d6338a23836dc4c09780b14e8a6734692bdd8ef9231460a68" # Replace with your actual address
+
+[dependencies]
+SupraFramework = { git = "https://github.com/Entropy-Foundation/aptos-core.git", rev = "dev", subdir = "aptos-move/framework/supra-framework" }
+
