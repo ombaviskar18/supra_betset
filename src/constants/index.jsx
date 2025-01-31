@@ -137,10 +137,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on BTC's short-term price movement",
         image: img1,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 1200000,
-        liquidity: 500000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 2,
@@ -149,10 +146,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on ETH's short-term price movement",
         image: img2,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 800000,
-        liquidity: 300000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 3,
@@ -161,10 +155,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on SOL's short-term price movement",
         image: img3,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 400000,
-        liquidity: 150000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 4,
@@ -173,10 +164,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on XRP's short-term price movement",
         image: img4,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 300000,
-        liquidity: 100000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 5,
@@ -185,10 +173,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on BNB's short-term price movement",
         image: img5,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 600000,
-        liquidity: 250000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 6,
@@ -197,10 +182,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on SHIB's short-term price movement",
         image: img6,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 200000,
-        liquidity: 75000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 7,
@@ -209,10 +191,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on DOT's short-term price movement",
         image: img7,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 350000,
-        liquidity: 120000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 8,
@@ -221,10 +200,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on AVAX's short-term price movement",
         image: img8,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 450000,
-        liquidity: 180000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 9,
@@ -233,10 +209,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on LUNA's short-term price movement",
         image: img9,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 100000,
-        liquidity: 40000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 10,
@@ -245,10 +218,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on ADA's short-term price movement",
         image: img10,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 500000,
-        liquidity: 200000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 11,
@@ -257,10 +227,7 @@ export const BET_CONTENT = {
         shortDescription: "Bet on DOGE's short-term price movement",
         image: img11,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 700000,
-        liquidity: 300000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       },
       {
         id: 12,
@@ -269,13 +236,9 @@ export const BET_CONTENT = {
         shortDescription: "Bet on LTC's short-term price movement",
         image: img12,
         yesPercentage: 0,
-        noPercentage: 100,
-        volume: 250000,
-        liquidity: 90000,
-        expiryDate: "1-60 minutes"
+        noPercentage: 100
       }
              
   ]
   
 };
-

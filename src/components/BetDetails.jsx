@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import { BET_CONTENT } from '../constants';
+import { RiErrorWarningLine } from "@remixicon/react";
 
 const SUPRA_API_KEY = 'b92be6d207a9bc174f3a819d5f1f45b4d599deaadf7fce0b3142bb64a517abb4';
 const SUPRA_API_URL = 'https://prod-kline-rest.supra.com';
@@ -13,6 +14,7 @@ const BetDetails = () => {
   const [currentPrice, setCurrentPrice] = useState(null);
   const [betAmount, setBetAmount] = useState('');
   const [selectedDuration, setSelectedDuration] = useState(1); // Default 1 minute
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (bet) {
@@ -41,6 +43,7 @@ const BetDetails = () => {
       if (response.data && response.data.prices && response.data.prices.length > 0) {
         const priceData = response.data.prices[0];
         setCurrentPrice(parseFloat(priceData.price));
+        setError(null);
       } else {
         // Fallback to REST API
         const restResponse = await axios.get(`${SUPRA_API_URL}/price`, {
@@ -55,12 +58,15 @@ const BetDetails = () => {
 
         if (restResponse.data && restResponse.data.price) {
           setCurrentPrice(parseFloat(restResponse.data.price));
+          setError(null);
         } else {
+          setError('Invalid price data received');
           console.error('Invalid price data received:', restResponse.data);
         }
       }
     } catch (error) {
       console.error('Error fetching price:', error);
+      setError('Failed to fetch price data');
       // Keep the last known price if there's an error
       if (!currentPrice) {
         setCurrentPrice(null);
@@ -70,31 +76,38 @@ const BetDetails = () => {
 
   const handleBet = async (direction) => {
     if (!betAmount || betAmount <= 0) {
-      alert('Please enter a valid bet amount');
+      setError('Please enter a valid bet amount');
       return;
     }
 
     if (!currentPrice) {
-      alert('Bet Successfullly Placed');
+      setError('Failed to load current price');
       return;
     }
 
-    // Here you can implement your betting logic without wallet integration
-    console.log('Placing bet:', {
-      direction,
-      amount: betAmount,
-      currentPrice,
-      pair: bet.title,
-      duration: selectedDuration
-    });
-    
-    alert('Bet placed successfully!');
+    try {
+      // Here you can implement your betting logic without wallet integration
+      console.log('Placing bet:', {
+        direction,
+        amount: betAmount,
+        currentPrice,
+        pair: bet.title,
+        duration: selectedDuration
+      });
+      
+      setError(null);
+      alert('Bet placed successfully!');
+    } catch (err) {
+      setError('Failed to place bet. Please try again.');
+      console.error('Bet error:', err);
+    }
   };
 
   if (!bet) {
     return (
       <div className="flex items-center justify-center h-screen">
         <div className="text-center text-neutral-400 text-5xl">
+          <RiErrorWarningLine className="inline-block mr-2" />
           Bet not found :( select specific Bet from BetMarket
         </div>
       </div>
@@ -122,6 +135,13 @@ const BetDetails = () => {
         <h2 className="text-2xl font-semibold mb-4">{bet.title}</h2>
         <p className="text-neutral-400 mb-4">{bet.description}</p>
         
+        {error && (
+          <div className="bg-red-500/20 text-red-500 p-3 rounded-lg mb-4 flex items-center">
+            <RiErrorWarningLine className="mr-2" />
+            {error}
+          </div>
+        )}
+
         <div className="text-xl font-bold text-center mb-4">
           {currentPrice ? (
             `Current Price: $${currentPrice.toFixed(2)}`
@@ -178,16 +198,61 @@ const BetDetails = () => {
 
         <input
           type="number"
-          placeholder="Amount in USDC"
+          placeholder="Amount in supra"
           className="w-full p-2 mb-4 rounded-lg text-black"
           value={betAmount}
           onChange={(e) => setBetAmount(e.target.value)}
         />
-
         <div className="text-neutral-400 mt-4">
-          <p>Volume: {bet.volume} USDC</p>
-          <p>Liquidity: {bet.liquidity} USDC</p>
-          <p>Expires At: {bet.expiryDate}</p>
+          <button 
+            className="bg-blue-600 py-2 px-4 rounded-lg w-full text-white flex items-center justify-center"
+            onClick={async () => {
+              try {
+                // Check if StarKey is installed
+                const isStarkeyInstalled = window?.starkey;
+                
+                if (!isStarkeyInstalled) {
+                  window.open('https://starkey.app/', '_blank');
+                  return;
+                }
+
+                // Get provider
+                const provider = window.starkey?.supra;
+                
+                // Connect wallet
+                const accounts = await provider.connect();
+                const fromAddress = accounts[0];
+                
+                // Create transaction with padded hex value
+                const transaction = {
+                  data: "0x" + betAmount.toString(16).padStart(64, '0'), // Pad hex to 32 bytes
+                  from: fromAddress,
+                  to: "0xContractAddress", // Replace with actual contract address
+                  value: betAmount
+                };
+
+                // Send transaction
+                const txHash = await provider.sendTransaction(transaction);
+                console.log("Transaction hash:", txHash);
+
+                // Listen for account changes
+                provider.on('accountChanged', (accounts) => {
+                  if (accounts.length > 0) {
+                    console.log(`Switched to account ${accounts[0]}`);
+                  }
+                });
+
+                setError(null);
+
+              } catch (err) {
+                console.error("Transaction failed:", err);
+                setError("Transaction failed. Please try again.");
+              }
+            }}
+          >
+            <RiErrorWarningLine className="mr-2" />
+            Place Bet
+          </button>
         </div>
       </motion.div>
     </div>
